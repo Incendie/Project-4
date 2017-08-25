@@ -70,7 +70,7 @@ recommendApp.getUserTime = () => {
 	$(".timeToKill").on("submit", (e) => {
 		e.preventDefault();
 		recommendApp.userTime = $(".timeSubmit").val();
-		console.log("userTime",recommendApp.userTime);
+		console.log("Time to kill:",recommendApp.userTime);
 	});
 };
 
@@ -79,11 +79,18 @@ recommendApp.getUserGenres = () => {
 	$(".genresLiked").on("submit", (e) => {
 		e.preventDefault();
 		let themes = [];
-		$(`input[name="userGenres"]:checked`).each((i,el) => {
-			themes.push(el.value);
-		});
+		let userInput = $(`input[name="userGenres"]:checked`);
+		if (userInput.length <=3){
+			userInput.each((i,el) => {
+				themes.push(el.value);
+			});
+		}
+		else {
+			alert("Please only check 3 or less genres");
+		}
 		recommendApp.userGenres = themes;
 		console.log("Genres",recommendApp.userGenres);
+		recommendApp.getRecommendations();
 	});
 };
 
@@ -101,7 +108,7 @@ recommendApp.getMovies = () => {
 				// console.log(movie);
 				recommendApp.movies[movie.title] = {};
 				// recommendApp.movies[movie.title].genres = [];
-				recommendApp.movies[movie.title].runtime = parseInt(movie.runtime);
+				recommendApp.movies[movie.title].runtime = recommendApp.roundShowtime(parseInt(movie.runtime)/60);
 				recommendApp.movies[movie.title].title = movie.title;
 				recommendApp.movies[movie.title].trailer = movie.trailer;
 				recommendApp.movies[movie.title].poster = movie.images.poster;
@@ -157,14 +164,44 @@ recommendApp.getAnime = () => {
 	}
 };
 
-//initialize
-recommendApp.init = () => {
-	// recommendApp.getList();
-	// recommendApp.getUserTime();
-	// recommendApp.getUserGenres();
+recommendApp.getRecommendations = () => {
+	let uGenres = recommendApp.userGenres;
+	let movies = recommendApp.movies;
+
+	for (let movie in movies) {
+		let matches = 0;
+		for (let i=0; i<uGenres.length; i++){
+			for (let n=0; n<movies[movie].genres.length; n++) {
+				if (uGenres[i] === movies[movie].genres[n]){
+					matches++;
+				}
+			}
+			if (matches>0) {
+				console.log(movies[movie].title);
+			}
+		}
+	}
+};
+
+recommendApp.getUserInput = () => {
+	recommendApp.getUserTime();
+	recommendApp.getUserGenres();
+}
+
+recommendApp.getPopcornData = () => {
 	recommendApp.getMovies();
 	recommendApp.getShows();
-	recommendApp.getAnime();
+	recommendApp.getAnime();	
+}
+
+recommendApp.roundShowtime = (num) => {
+	return (Math.round(num*4)/4);
+}
+
+//initialize
+recommendApp.init = () => {
+	recommendApp.getPopcornData();
+	recommendApp.getUserInput();
 };
 
 //document ready
