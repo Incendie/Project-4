@@ -3,3 +3,272 @@
 	flex-direction: column;
 }
 
+.recommendations {
+	display: flex;
+	justify-content: space-between;
+}
+
+.movie, .anime {
+	width: calc(50% - 12.5px);	
+	
+	& h2 {
+		font-size: 1rem;
+		padding: 10px 0;
+		height: 50px;
+	}
+}
+
+.animeContainer, .movieContainer {
+	height: 600px;
+}
+
+.movie {
+	margin-right: 25px;
+}
+
+.description{
+	margin: 50px 0;
+}
+
+.timeToKill {
+	display: flex;
+	flex-direction: column;
+}
+
+.timeSubmit {
+	display: inline-block;
+	width: 50%;
+	margin: 25px auto;	
+}
+
+.genreBox {
+	width: 50%;
+	padding-left: 20%;
+	margin: 10px 0;
+
+	label {
+		color: rgba(0,0,0,0.2);
+	}
+}
+
+.instructions {
+	text-align: center;
+	font-size: 1rem;
+}
+
+.recommendations {
+	display: none;
+	padding-top: 75px;
+}
+
+input[type="number"] {
+	padding: 10px 0;
+	font-size: 3rem;
+}
+
+input[type="checkbox"] {
+	display: none;
+
+	&:checked + label {
+		color: black;
+	}
+}
+
+label[for="genresLiked"]{
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+}
+
+.forms {
+	background: $bgColour;
+	background-image: url(../assets/glasses.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	& + button {
+		margin-top: 50px;
+	}
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+    position: relative;
+    top: 45%;    
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading {
+	height: 100vh;
+	background: rgba(0,0,0,0.5);
+	display: none;
+	position: relative;	
+
+	p {
+		position: absolute;
+		top: 60%;
+		left: 50%;
+		transform: translateX(-50%);
+		color: white;
+	}
+}
+
+.showShows, .rollShows {
+	display: none;
+	position: absolute;
+	bottom: -60px;
+	left: 25%;
+}
+
+.showShows{
+	bottom: 50%;
+}
+
+footer {
+	display: flex;
+	justify-content: space-around;	
+	bottom: 0;
+	padding-bottom: 50px;
+	margin-top: 100px;
+	ul {
+		
+		li {
+			margin: 0 20px;
+		}
+		a {
+			color: black;
+			font-size: 12px;
+		}
+	}
+}
+
+//----------------------- MEDIA QUERIES-------------------------
+@media (max-width: 900px){
+	.wrapper {
+		max-width: 700px;
+	}
+	.movieContainer, .animeContainer {
+		height: 450px;
+	}
+	.genreBox {
+		padding-left: 10%;
+	}
+	button {
+		font-size: 1.75rem;
+	}
+	h1 {
+		font-size: 4.75rem;
+	}
+	.showShows, .rollShows {
+		bottom: 0%;
+	}
+	main {
+		height: 70vh;
+	}
+	
+	footer{ 
+		padding-top: 20px;
+	}
+
+}
+
+@media (max-width: 768px){
+	.wrapper {
+		max-width: 450px;
+	}
+	.recommendations {
+		flex-direction: column;
+		align-items: center;
+	}
+	.movieContainer, .animeContainer {
+		height: 600px;
+		padding: 0 10px;
+	}
+
+	.movie, .anime {
+		width: 100%;
+	}
+
+	.movie {
+		margin-bottom: 50px;
+		margin-left: 20px;
+	}
+
+	button {
+		font-size: 1.5rem;
+	}
+
+	.showShows, .rollShows {
+		bottom: 100%;
+	}
+
+	.loading {
+		min-height: 100vh;
+	}
+
+	main {
+		min-height: 1000px;
+	}
+
+	footer {
+		padding: 0;
+		margin: 50px 0;
+		ul {
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-around;
+		}
+	}
+}
+
+@media (max-width: 768px){
+	.wrapper {
+		max-width: 300px;
+	}
+
+	h1 {
+		font-size: 4rem;		
+	}
+
+	header{
+		padding: 50px;		
+	}
+
+	ul {
+		flex-direction: column;
+	}
+
+	button {
+		font-size: 1.25rem;
+		width: 50%;
+		padding: 10px 0;
+	}
+
+	.movieContainer, .animeContainer {
+		height: 400px;
+		padding: 0 10px;
+	}
+
+	.showShows, .rollShows {
+		bottom: calc(100% - 70px);
+	}
+}
+

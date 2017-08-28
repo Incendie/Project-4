@@ -133,12 +133,86 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-label {
-  text-transform: capitalize; }
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 14px; }
+
+label, button, input {
+  text-transform: capitalize;
+  font-size: 2rem;
+  text-align: center;
+  padding: 0; }
+
+button {
+  border: none;
+  background: none;
+  padding: 10px 50px;
+  width: 50%;
+  display: block;
+  background: lightgreen;
+  margin: 0 auto; }
 
 .wrapper {
-  max-width: 1170px;
+  max-width: 900px;
   margin: 0 auto; }
+
+h1, h2, p {
+  margin: 0;
+  padding: 0; }
+
+img {
+  width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto; }
+
+header {
+  padding: 20vh 0;
+  background: lightgrey;
+  height: calc(100vh / 1.618);
+  background-image: url(../assets/hero.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center; }
+
+h1, h2 {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  text-align: center; }
+
+h1 {
+  font-size: 5.5rem;
+  letter-spacing: 4px;
+  color: white; }
+
+h2 {
+  font-size: 3rem;
+  letter-spacing: 2px; }
+
+p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  letter-spacing: 1.25px; }
+
+section {
+  padding: 75px 0; }
+
+form {
+  padding: 50px 0;
+  margin: 0 auto; }
+
+main, section {
+  position: relative; }
+
+main {
+  display: none;
+  height: 100vh;
+  padding: 0;
+  margin: 0; }
+
+ul {
+  list-style: none;
+  padding: 0; }
 
 .userGenres {
   display: -webkit-box;
@@ -150,3 +224,257 @@ label {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column; }
+
+.recommendations {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.movie, .anime {
+  width: calc(50% - 12.5px); }
+  .movie h2, .anime h2 {
+    font-size: 1rem;
+    padding: 10px 0;
+    height: 50px; }
+
+.animeContainer, .movieContainer {
+  height: 600px; }
+
+.movie {
+  margin-right: 25px; }
+
+.description {
+  margin: 50px 0; }
+
+.timeToKill {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.timeSubmit {
+  display: inline-block;
+  width: 50%;
+  margin: 25px auto; }
+
+.genreBox {
+  width: 50%;
+  padding-left: 20%;
+  margin: 10px 0; }
+  .genreBox label {
+    color: rgba(0, 0, 0, 0.2); }
+
+.instructions {
+  text-align: center;
+  font-size: 1rem; }
+
+.recommendations {
+  display: none;
+  padding-top: 75px; }
+
+input[type="number"] {
+  padding: 10px 0;
+  font-size: 3rem; }
+
+input[type="checkbox"] {
+  display: none; }
+  input[type="checkbox"]:checked + label {
+    color: black; }
+
+label[for="genresLiked"] {
+  width: 100%;
+  margin: 0 auto;
+  display: block; }
+
+.forms {
+  background: lightgrey;
+  background-image: url(../assets/glasses.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center; }
+
+ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  ul + button {
+    margin-top: 50px; }
+
+.loader {
+  border: 16px solid #f3f3f3;
+  /* Light grey */
+  border-top: 16px solid #3498db;
+  /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+  position: relative;
+  top: 45%; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+.loading {
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  position: relative; }
+  .loading p {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: white; }
+
+.showShows, .rollShows {
+  display: none;
+  position: absolute;
+  bottom: -60px;
+  left: 25%; }
+
+.showShows {
+  bottom: 50%; }
+
+footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  bottom: 0;
+  padding-bottom: 50px;
+  margin-top: 100px; }
+  footer ul li {
+    margin: 0 20px; }
+  footer ul a {
+    color: black;
+    font-size: 12px; }
+
+@media (max-width: 900px) {
+  .wrapper {
+    max-width: 700px; }
+  .movieContainer, .animeContainer {
+    height: 450px; }
+  .genreBox {
+    padding-left: 10%; }
+  button {
+    font-size: 1.75rem; }
+  h1 {
+    font-size: 4.75rem; }
+  .showShows, .rollShows {
+    bottom: 0%; }
+  main {
+    height: 70vh; }
+  footer {
+    padding-top: 20px; } }
+
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 450px; }
+  .recommendations {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .movieContainer, .animeContainer {
+    height: 600px;
+    padding: 0 10px; }
+  .movie, .anime {
+    width: 100%; }
+  .movie {
+    margin-bottom: 50px;
+    margin-left: 20px; }
+  button {
+    font-size: 1.5rem; }
+  .showShows, .rollShows {
+    bottom: 100%; }
+  .loading {
+    min-height: 100vh; }
+  main {
+    min-height: 1000px; }
+  footer {
+    padding: 0;
+    margin: 50px 0; }
+    footer ul {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+      justify-content: space-around; } }
+
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 300px; }
+  h1 {
+    font-size: 4rem; }
+  header {
+    padding: 50px; }
+  ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  button {
+    font-size: 1.25rem;
+    width: 50%;
+    padding: 10px 0; }
+  .movieContainer, .animeContainer {
+    height: 400px;
+    padding: 0 10px; }
+  .showShows, .rollShows {
+    bottom: calc(100% - 70px); } }

@@ -1,8 +1,96 @@
-label {
+body {
+	font-family: $textFont;
+	font-size: 14px;
+}
+
+label, button, input{
 	text-transform: capitalize;
+	font-size: 2rem;
+	text-align: center;
+	padding: 0;
+}
+
+button {
+	border: none;
+	background: none;
+	padding: 10px 50px;
+	width: 50%;
+	display: block;
+	background: lightgreen;
+	margin: 0 auto;
 }
 
 .wrapper {
-	max-width: 1170px;
+	max-width: 900px;
 	margin: 0 auto;
+}
+
+h1, h2, p {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	width: 100%;
+	max-height: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+header {
+	padding: 20vh 0;
+	background: $bgColour;
+	height: calc(100vh / 1.618);
+	background-image: url(../assets/hero.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+h1, h2 {
+	font-family: $headingFont;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+h1 {
+	font-size: 5.5rem;
+	letter-spacing: 4px;
+	color: white;	
+}
+
+h2 {
+	font-size: 3rem;
+	letter-spacing: 2px;
+}
+
+p {
+	font-size: 1.2rem;
+	margin: 20px 0;
+	letter-spacing: 1.25px;
+}
+
+section {
+	padding: 75px 0;
+}
+
+form {
+	padding: 50px 0;
+	margin: 0 auto;
+}
+
+main, section {
+	position: relative;	
+}
+
+main {
+	display: none;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
 }

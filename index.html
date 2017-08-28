@@ -2,122 +2,123 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Anson Li - Project 4</title>
-	<link rel="stylesheet" href="styles/styles.css">
+	<title>So You've Got Some Time To Kill?</title>
+	<script src="https://use.fontawesome.com/6485e00915.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Lato|Ubuntu" rel="stylesheet">
+	<link rel="stylesheet" href="styles/styles.css" rel="stylesheet">
 </head>
 <body>
-	<h1>So, you've got time to kill?</h1>
-	<div class="wrapper">
-		<form class="timeToKill">
-			<label for="userTime">How much time do you have to kill?</label>
-			<input type="number" id="userTime" placeholder="0" min="0" class="timeSubmit" step="0.5">
-			<button type="submit" class="timeSubmit">Next</button>
-		</form>
+	<header>
+		<div class="wrapper">
+			<h1>So, you've got some time to kill?</h1>
+		</div>
+	</header>
 
-		<form class="genresLiked">
-			<p>Which genres do you enjoy most or want to try?</p>
-			<div class="genreBox">
-				<input type="checkbox" value="action" name="userGenres" id="actionGenre">
-				<label for="actionGenre">action</label>
+	<section class="about">
+		<div class="wrapper">
+			<div class="description">
+				<h2>Let me guess, you're bored</h2>
+				<p>If you've found your way here, it probably means you're bored and you suddenly found yourself with an overabundance of time (lucky you) but don't know what to do with it.</p>
+				<p>I can tell that you're probably also too lazy to think of what you wish to waste your time with. Fear not! I'm here to help. Just tell me how much time you need to waste and what your preferences are. I'll do the thinking for you.</p>
 			</div>
-			<div class="genreBox">
-				<input type="checkbox" value="adventure" name="userGenres" id="adventureGenre">
-				<label for="adventureGenre">adventure</label>
-			</div>
-			<div class="genreBox">
-				<input type="checkbox" value="animation" name="userGenres" id="animationGenre">
-				<label for="animationGenre">animation</label>
-			</div>
-			<div class="genreBox">
-				<input type="checkbox" value="comedy" name="userGenres" id="comedyGenre">
-				<label for="comedyGenre">comedy</label>
-			</div>
-			<div class="genreBox">
-				<input type="checkbox" value="crime" name="userGenres" id="crimeGenre">
-				<label for="crimeGenre">crime</label>
-			</div>
-			<div class="genreBox">
-				<input type="checkbox" value="documentary" name="userGenres" id="documentaryGenre">
-				<label for="documentaryGenre">documentary</label>
-			</div>
-			<div class="genreBox">
-				<input type="checkbox" value="drama" name="userGenres" id="dramaGenre">
-				<label for="dramaGenre">drama</label>
-			</div>
-			<div class="genreBox">
-				<input type="checkbox" value="family" name="userGenres" id="familyGenre">
-				<label for="familyGenre">family</label>
-			</div>
-			<div class="genreBox">
-				<input type="checkbox" value="fantasy" name="userGenres" id="fantasyGenre">
-				<label for="fantasyGenre">fantasy</label>
-			</div>
-			<div class="genreBox">
-				<input type="checkbox" value="film-noir" name="userGenres" id="filmNoirGenre" =>
-				<label for="filmNoirGenre">film-noir</label>
-			</div>
-			<div class="genreBox">
-				<input type="checkbox" value="history" name="userGenres" id="historyGenre">
-				<label for="historyGenre">history</label>
-			</div>
-			<div class="genreBox">
-				<input type="checkbox" value="horror" name="userGenres" id="horrorGenre"> 
-				<label for="horrorGenre">horror</label>
-			</div>
-			<div class="genreBox">
-				<input type="checkbox" value="indie" name="userGenres" id="indieGenre">
-				<label for="indieGenre">indie</label>
-			</div>
-			<div class="genreBox">
-				<input type="checkbox" value="music" name="userGenres" id="musicGenre">
-				<label for="musicGenre">music</label>
-			</div>
-			<div class="genreBox">
-				<input type="checkbox" value="mystery" name="userGenres" id="mysteryGenre">
-				<label for="mysteryGenre">mystery</label>
-			</div>
-			<div class="genreBox">
-				<input type="checkbox" value="romance" name="userGenres" id="romanceGenre">
-				<label for="romanceGenre">romance</label>
-			</div>
-			<div class="genreBox">
-				<input type="checkbox" value="science-fiction" name="userGenres" id="sciFiGenre">
-				<label for="sciFiGenre">sci-fi</label>
-			</div>
-			<div class="genreBox">
-				<input type="checkbox" value="sports" name="userGenres" id="sportsGenre">
-				<label for="sportsGenre">sports</label>
-			</div>
-			<div class="genreBox">
-				<input type="checkbox" value="superhero" name="userGenres" id="superheroGenre">
-				<label for="superheroGenre">superhero</label>
-			</div>
-			<div class="genreBox">
-				<input type="checkbox" value="suspense" name="userGenres" id="suspenseGenre">
-				<label for="suspenseGenre">suspense</label>
-			</div>
-			<div class="genreBox">
-				<input type="checkbox" value="thriller" name="userGenres" id="thrillerGenre">
-				<label for="thrillerGenre">thriller</label>
-			</div>
-			<div class="genreBox">
-				<input type="checkbox" value="war" name="userGenres" id="warGenre">
-				<label for="warGenre">war</label>
-			</div>
-			<div class="genreBox">
-				<input type="checkbox" value="western" name="userGenres" id="westernGenre">
-				<label for="westernGenre">western</label>
-			</div>
-
-			<button type="submit">Show me the things</button>
-		</form>
-
-		<div class="recommendations">
-			<div class="wrapper">
-				
-			</div><!--/wrapper-->			
-		</div><!--/.recommendations-->
-	</div>
+			<form class="timeToKill">
+				<label for="userTime">How many hours do you have to kill?</label>
+				<input type="number" id="userTime" placeholder="0" min="0" class="timeSubmit" step="0.5">
+				<button type="submit" class="timeSubmit">Next</button>
+			</form>
+	</section>
+	<section class="forms" id="forms">
+		<div class="wrapper">	
+			<form class="genresLiked">				
+				<label for="genresLiked">Which genres do you enjoy most or want to try?</label>
+				<p class="instructions">Choose up to 3</p>
+				<ul>
+					<li class="genreBox">
+						<input type="checkbox" value="action" name="userGenres" id="actionGenre">
+						<label for="actionGenre">action</label>
+					</li>
+					<li class="genreBox">
+						<input type="checkbox" value="adventure" name="userGenres" id="adventureGenre">
+						<label for="adventureGenre">adventure</label>
+					</li>
+					<li class="genreBox">
+						<input type="checkbox" value="comedy" name="userGenres" id="comedyGenre">
+						<label for="comedyGenre">comedy</label>
+					</li>
+					<li class="genreBox">
+						<input type="checkbox" value="crime" name="userGenres" id="crimeGenre">
+						<label for="crimeGenre">crime</label>
+					</li>
+					<li class="genreBox">
+						<input type="checkbox" value="drama" name="userGenres" id="dramaGenre">
+						<label for="dramaGenre">drama</label>
+					</li>
+					<li class="genreBox">
+						<input type="checkbox" value="fantasy" name="userGenres" id="fantasyGenre">
+						<label for="fantasyGenre">fantasy</label>
+					</li>
+					<li class="genreBox">
+						<input type="checkbox" value="history" name="userGenres" id="historyGenre">
+						<label for="historyGenre">history</label>
+					</li>
+					<li class="genreBox">
+						<input type="checkbox" value="horror" name="userGenres" id="horrorGenre"> 
+						<label for="horrorGenre">horror</label>
+					</li>
+					<li class="genreBox">
+						<input type="checkbox" value="music" name="userGenres" id="musicGenre">
+						<label for="musicGenre">music</label>
+					</li>
+					<li class="genreBox">
+						<input type="checkbox" value="mystery" name="userGenres" id="mysteryGenre">
+						<label for="mysteryGenre">mystery</label>
+					</li>
+					<li class="genreBox">
+						<input type="checkbox" value="romance" name="userGenres" id="romanceGenre">
+						<label for="romanceGenre">romance</label>
+					</li>
+					<li class="genreBox">
+						<input type="checkbox" value="science-fiction" name="userGenres" id="sciFiGenre">
+						<label for="sciFiGenre">sci-fi</label>
+					</li>
+					<li class="genreBox">
+						<input type="checkbox" value="thriller" name="userGenres" id="thrillerGenre">
+						<label for="thrillerGenre">thriller</label>
+					</li>
+				</ul>
+				<button type="submit">That's what I like</button>
+			</form>			
+		</div> <!--/.wrapper for section-->
+	</section>
+	<main>
+		<div class="loading">
+			<div class="loader"></div>
+			<p>Please be patient while I think of something for you...</p>		
+		</div>
+		<button class="showShows">Show me the things</button>
+		<div class="wrapper">
+			<div class="recommendations">
+				<div class="loading"></div>
+				<div class="movie">
+					<h2></h2>
+					<div class="movieContainer"></div>
+				</div>
+				<div class="anime">
+					<h2></h2>
+					<div class="animeContainer"></div>
+				</div>
+			</div><!--/.recommendations-->
+		</div>
+		<button class="rollShows">Reroll Suggestions</button>
+	</main>
+	<footer>
+		<ul class="footLinks wrapper">
+			<li><a href="https://twitter.com/coding_li"><i class="fa fa-twitter fa-4x" aria-hidden="true"></i></a></li>
+			<li><a href="https://github.com/Incendie"><i class="fa fa-github fa-4x" aria-hidden="true"></i></a></li>
+			<li><a href="contact@ansonli.io"><i class="fa fa-envelope fa-4x" aria-hidden="true"></i></a></li>
+			<li><a href="https://www.linkedin.com/in/ansonsfli/"><i class="fa fa-linkedin-square fa-4x" aria-hidden="true"></i></a></li>
+		</ul>
+	</footer>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script src="scripts/script.js"></script>
 </body>
